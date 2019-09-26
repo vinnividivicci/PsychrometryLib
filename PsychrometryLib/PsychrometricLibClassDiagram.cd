@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PsychrometryLib.PsychrometricAirMixtureIP" Collapsed="true">
+    <Position X="3.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricAirMixtureIP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.PsychrometricAirMixtureSI" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricAirMixtureSI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.PsychrometricException" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.OutOfRangePsychrometricException" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.ImpossiblePsychrometricValuesException" Collapsed="true">
+    <Position X="20.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.UnsuportedPsychrometricInputValue" Collapsed="true">
+    <Position X="1.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.RHOutOfRangeException" Collapsed="true">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.WOutOfRangeException" Collapsed="true">
+    <Position X="10.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.WsOutOfRangeException" Collapsed="true">
+    <Position X="12.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.PwOutOfRangeException" Collapsed="true">
+    <Position X="15" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.TemperatureOutOfRangeException" Collapsed="true">
+    <Position X="3.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.DegreeOfSaturationOutOfRangeException" Collapsed="true">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.ImpossibleAbsolutePressureValue" Collapsed="true">
+    <Position X="19.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.ImpossibleSpecificVolume" Collapsed="true">
+    <Position X="21.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.DewpointCannotBeHigherThanDryBulbTemperature" Collapsed="true">
+    <Position X="24" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.WetBulbTemperatureCannotBeGreaterThanDryBulb" Collapsed="true">
+    <Position X="17.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.DewpointCannotBeCalculatedWithInputTemperature" Collapsed="true">
+    <Position X="1.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PsychrometricExceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.PsychrometricPointIP" Collapsed="true">
+    <Position X="3.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAAwRQAoAAAUEJAEAAABgWAwDAEMQAAgiWAKiAIDRgA=</HashCode>
+      <FileName>PsychrometricPointIP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PsychrometryLib.PsychrometricPointSI" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAAhRQQiCCQUEIAIAAAAgUAwDAAMRAAAgHAYiACgRgA=</HashCode>
+      <FileName>PsychrometricPointSI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
