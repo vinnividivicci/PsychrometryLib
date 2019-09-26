@@ -1,2 +1,2 @@
 # PsychrometryLib
- Psycrhometric analysis library for .NET
+ Psychrometric analysis library for .NET
