@@ -536,7 +536,7 @@ namespace PsychrometryLib
         { 
             //ASHRAE Eq. (23)
             double Ws;
-            Ws = (0.62198 * ((PwsInPa) / (PInPa - PwsInPa)));
+            Ws = (0.621945 * ((PwsInPa) / (PInPa - PwsInPa)));
 
             if (Ws <= 0)
             {
