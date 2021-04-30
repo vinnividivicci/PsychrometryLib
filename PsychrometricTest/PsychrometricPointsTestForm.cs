@@ -135,5 +135,43 @@ namespace PsychrometricTest
                 tabPanel3_txtP.Text = p2.AtmosphericPressureKPa.ToString();
             }
         }
+
+        private void tabPanel4_btnCalculate_Click(object sender, EventArgs e)
+        {
+            //  Collect input data
+            double altitude = double.Parse(tabPanel4_txtAltitude.Text);
+            double Db = double.Parse(tabPanel4_txtDb.Text);
+            double W = double.Parse(tabPanel4_txtHumidityRatio.Text);
+
+            //  Decide if IP or SI
+            if (checkBox1.Checked == false)
+            {
+                //  IP units
+                PsychrometricPointIP p1 = new PsychrometricPointIP(altitude);
+                p1.CalcAllUsingDbGrains(Db, W);
+
+                tabPanel4_txtWb.Text = p1.WetBulbTemperatureInDegF.ToString();
+                tabPanel4_txtRH.Text = p1.RelativeHumidityPercentage.ToString();
+                tabPanel4_txtW.Text = p1.HumidityRatioInPoundsPerPound.ToString();
+                tabPanel4_txtW2.Text = p1.HumidityRatioGrainsPerPound.ToString();
+                tabPanel4_txtV.Text = p1.SpecificVolumeInCubicFeetPerPound.ToString();
+                tabPanel4_txtEnthalpy.Text = p1.EnthalpyInBtuPerPound.ToString();
+                tabPanel4_txtPressure.Text = p1.AtmosphericPressurePsia.ToString();
+            }
+            else if (checkBox1.Checked == true)
+            {
+                //  SI units
+                PsychrometricPointSI p2 = new PsychrometricPointSI(altitude);
+                p2.CalcAllUsingDbGrams(Db, W);
+
+                tabPanel4_txtWb.Text = p2.WetBulbTemperature.ToString();
+                tabPanel4_txtRH.Text = p2.RelativeHumidityPercentage.ToString();
+                tabPanel4_txtW.Text = p2.HumidityRatio.ToString();
+                tabPanel4_txtW2.Text = p2.HumidityRatioGramsPerKilogram.ToString();
+                tabPanel4_txtV.Text = p2.SpecificVolume.ToString();
+                tabPanel4_txtEnthalpy.Text = p2.Enthalpy.ToString();
+                tabPanel4_txtPressure.Text = p2.AtmosphericPressureKPa.ToString();
+            }
+        }
     }
 }

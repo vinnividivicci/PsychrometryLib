@@ -20,8 +20,6 @@
  **************************/
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PsychrometryLib
 {
@@ -460,10 +458,27 @@ namespace PsychrometryLib
             }
             
         }
-        
+
+        /// <summary>
+        /// Calculate all air properties using Dry-Bulb T [Deg. C] and Absolute water content of air [grams(a)/kg(da)]
+        /// </summary>
+        /// <param name="DbDegF">Dry-Bulb Temperature [Deg. C]</param>
+        /// <param name="grams">Absolute water content of air [grams(a)/kg(da)]</param>
+        public void CalcAllUsingDbGrams(double DbDegF, double grams)
+        {
+            double RH = 0;
+            double W = grams / 1000;
+            double P = CalcAtmPressurePa(this._alt);
+            double PwsDb = CalcPws(DbDegF);
+            double Ws = CalcWs(PwsDb, P);
+            double u = CalcU(W, Ws);
+            RH = CalcRH(u, PwsDb, P);
+
+            CalcAllUsingDbRH(DbDegF, RH);
+        }
         #endregion
 
-        
+
         #region Supporting Methods
 
         /// <summary>
