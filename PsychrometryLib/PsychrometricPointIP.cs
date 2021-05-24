@@ -570,7 +570,7 @@ namespace PsychrometryLib
         {
             //ASHRAE Eq. (35)
             return (((1093 - (0.556 * WbDegF)) * WsWb) - (0.240 * (DbDegF - WbDegF))) / 
-                (1093 + (0.444 * (DbDegF - WbDegF)));
+                (1093 + (0.444 * DbDegF) - WbDegF);
         }
 
         /// <summary>
