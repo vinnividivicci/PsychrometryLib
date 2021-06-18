@@ -273,7 +273,7 @@ namespace PsychrometryLib
                 return this._flowRate;
             }
         }
-        
+
         #endregion
         #region Constructors
 
@@ -345,7 +345,7 @@ namespace PsychrometryLib
                 {
                     this._RH = CalcRH(this._u, this._PwsDb, this._P);
                 }
-                
+
                 this._v = CalcV(this._DbT, this._W, this._P);
                 this._h = CalcH(this._DbT, this._W);
                 this._Pw = CalcPw(this._P, this._W);
@@ -359,7 +359,7 @@ namespace PsychrometryLib
                 {
                     this._Td = CalcTd(this._Pw, this._WbT);
                 }
-                
+
                 this._m = CalcM(this._v, this._flowRate);
             }
         }
@@ -403,7 +403,7 @@ namespace PsychrometryLib
                 }
 
                 this._m = CalcM(this._v, this._flowRate);
-            } 
+            }
         }
 
         /// <summary>
@@ -440,7 +440,7 @@ namespace PsychrometryLib
                 {
                     this._RH = CalcRH(this._u, this._PwsDb, this._P);
                 }
-                
+
                 this._v = CalcV(this._DbT, this._W, this._P);
                 this._h = CalcH(this._DbT, this._W);
 
@@ -453,10 +453,10 @@ namespace PsychrometryLib
                 {
                     this._WbT = FindWbT(this._DbT, this._Td, this._W, this._P);
                 }
-                
+
                 this._m = CalcM(this._v, this._flowRate);
             }
-            
+
         }
 
         /// <summary>
@@ -516,7 +516,7 @@ namespace PsychrometryLib
             if (TDegK >= 173.15 && TDegK <= 273.15)
             {
                 //ASHRAE Eq.(5)
-                
+
                 lnPws = (C1 / TDegK) + C2 + (C3 * TDegK) + (C4 * Math.Pow(TDegK, 2)) +
                     (C5 * Math.Pow(TDegK, 3)) + (C6 * Math.Pow(TDegK, 4)) + (C7 * Math.Log(TDegK));
 
@@ -548,7 +548,7 @@ namespace PsychrometryLib
         /// <param name="PInPa">Pressure [Pa]</param>
         /// <returns>Humidity Ratio of Moist air at saturation (Ws) [kgH2O/kgAIR]</returns>
         protected static double CalcWs(double PwsInPa, double PInPa)
-        { 
+        {
             //ASHRAE Eq. (23)
             double Ws;
             Ws = (0.621945 * ((PwsInPa) / (PInPa - PwsInPa)));
@@ -580,7 +580,7 @@ namespace PsychrometryLib
             W = (((2501 - (2.326 * WbDegC)) * WsWb) - (1.006 * (DbDegC - WbDegC))) /
                (2501 + (1.86 * DbDegC) - (4.186 * WbDegC));
 
-            return W;   
+            return W;
         }
 
         /// <summary>
@@ -645,7 +645,7 @@ namespace PsychrometryLib
         protected static double CalcV(double DbDegC, double W, double PInPa)
         {
             double v;
-            v = (0.2871 * (DbDegC + 273.15) * (1 + (1.6078 * W))) / (PInPa/1000);
+            v = (0.2871 * (DbDegC + 273.15) * (1 + (1.6078 * W))) / (PInPa / 1000);
             if (v <= 0)
             {
                 throw new ImpossibleSpecificVolume();
@@ -706,7 +706,7 @@ namespace PsychrometryLib
              * */
             double PwInKpa = PwInPa / 1000;
             double a = Math.Log(PwInKpa);
-            
+
 
             if (WbDegC >= 0 && WbDegC <= 93)
             {
@@ -812,7 +812,7 @@ namespace PsychrometryLib
                 {
                     return WbT;
                 }
-            } 
+            }
         }
 
         /// <summary>
@@ -842,7 +842,7 @@ namespace PsychrometryLib
         /// <returns>Atmospheric Pressure (p) [Pa]</returns>
         protected static double CalcAtmPressurePa(double AltitudeInM)
         {
-           return 101325 * Math.Pow(1 - 2.25577e-05 * AltitudeInM, 5.2559);
+            return 101325 * Math.Pow(1 - 2.25577e-05 * AltitudeInM, 5.2559);
         }
 
         /// <summary>
@@ -854,7 +854,7 @@ namespace PsychrometryLib
         {
             return DegC + 273.15;
         }
-        
+
         #endregion
     }
 }

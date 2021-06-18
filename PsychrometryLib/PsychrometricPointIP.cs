@@ -123,7 +123,7 @@ namespace PsychrometryLib
         protected double _m;
 
         #region Getters and Setters
-        
+
         ///<returns>
         ///Altitude [ft]
         /// </returns>  
@@ -135,7 +135,7 @@ namespace PsychrometryLib
                 return this._alt;
             }
         }
-        
+
         /// <returns>
         /// Humidity Ratio [lbH2O/lbAIR]
         /// </returns>
@@ -157,7 +157,7 @@ namespace PsychrometryLib
                 return this._W * 7000;
             }
         }
-        
+
         /// <returns>
         /// Relative Humidity in percentage form
         /// </returns>
@@ -168,7 +168,7 @@ namespace PsychrometryLib
                 return this._RH * 100;
             }
         }
-        
+
         /// <returns>
         /// Relative Humidity in decimal form
         /// </returns>
@@ -179,7 +179,7 @@ namespace PsychrometryLib
                 return this._RH;
             }
         }
-        
+
         /// <returns>
         /// Specific Volume [ft3/lb]
         /// </returns>
@@ -190,7 +190,7 @@ namespace PsychrometryLib
                 return this._v;
             }
         }
-        
+
         /// <returns>
         /// Returns Enthalpy [BTU/lb]
         /// </returns>
@@ -201,7 +201,7 @@ namespace PsychrometryLib
                 return this._h;
             }
         }
-        
+
         /// <returns>
         /// Dew Point Temperature [Deg. F]
         /// </returns>
@@ -212,7 +212,7 @@ namespace PsychrometryLib
                 return this._Td;
             }
         }
-        
+
         /// <returns>
         /// Atmospheric Pressure [psia]
         /// </returns>
@@ -223,7 +223,7 @@ namespace PsychrometryLib
                 return this._P;
             }
         }
-        
+
         /// <returns>
         /// Dry Bulb Temperature [Deg. F]
         /// </returns>
@@ -234,7 +234,7 @@ namespace PsychrometryLib
                 return this._DbT;
             }
         }
-        
+
         /// <returns>
         /// Wet Bulb Temperature [Deg. F]
         /// </returns>
@@ -267,7 +267,7 @@ namespace PsychrometryLib
                 return this._flowRate;
             }
         }
-        
+
         #endregion
         #region Constructors
 
@@ -297,7 +297,7 @@ namespace PsychrometryLib
             this._alt = Altitude;
             this._flowRate = FlowRateCfm;
         }
-        
+
         #endregion
         #region Interface Methods
 
@@ -340,7 +340,7 @@ namespace PsychrometryLib
                 {
                     this._RH = CalcRH(this._u, this._PwsDb, this._P);
                 }
-                
+
                 this._v = CalcV(this._DbT, this._W, this._PinHg);
                 this._h = CalcH(this._DbT, this._W);
                 this._Pw = CalcPw(this._P, this._W);
@@ -354,7 +354,7 @@ namespace PsychrometryLib
                 {
                     this._Td = CalcTd(this._Pw, this._WbT);
                 }
-                
+
                 this._m = CalcM(this._v, this._flowRate);
             }
         }
@@ -397,9 +397,9 @@ namespace PsychrometryLib
                     this._Td = CalcTd(this._Pw, this._WbT);
                     this._WbT = FindWbT(this._DbT, this._Td, this._W, this._P);
                 }
-                
+
                 this._m = CalcM(this._v, this._flowRate);
-            } 
+            }
         }
 
         /// <summary>
@@ -437,7 +437,7 @@ namespace PsychrometryLib
                 {
                     this._RH = CalcRH(this._u, this._PwsDb, this._P);
                 }
-                
+
                 this._v = CalcV(this._DbT, this._W, this._PinHg);
                 this._h = CalcH(this._DbT, this._W);
 
@@ -450,10 +450,10 @@ namespace PsychrometryLib
                 {
                     this._WbT = FindWbT(this._DbT, this._Td, this._W, this._P);
                 }
-                
+
                 this._m = CalcM(this._v, this._flowRate);
             }
-            
+
         }
 
         /// <summary>
@@ -511,7 +511,7 @@ namespace PsychrometryLib
             if (TDegR >= 311.67 && TDegR <= 491.67)
             {
                 //ASHRAE Eq.(5)
-                
+
                 lnPws = (C1 / TDegR) + C2 + (C3 * TDegR) + (C4 * Math.Pow(TDegR, 2)) +
                     (C5 * Math.Pow(TDegR, 3)) + (C6 * Math.Pow(TDegR, 4)) + (C7 * Math.Log(TDegR));
 
@@ -543,7 +543,7 @@ namespace PsychrometryLib
         /// <param name="PInPsia">Pressure [psia]</param>
         /// <returns>Humidity Ratio of Moist air at saturation (Ws) [lbH2O/lbAIR]</returns>
         protected static double CalcWs(double PwsPsia, double PInPsia)
-        { 
+        {
             //ASHRAE Eq. (23)
             double Ws;
             Ws = (0.621945 * ((PwsPsia) / (PInPsia - PwsPsia)));
@@ -557,7 +557,7 @@ namespace PsychrometryLib
                 return Ws;
             }
         }
-        
+
         /// <summary>
         /// Calculate Air Humidity Ratio (W) [lbH2O/lbAIR]
         /// </summary>
@@ -569,7 +569,7 @@ namespace PsychrometryLib
         protected static double CalcW(double DbDegF, double WbDegF, double WsWb)
         {
             //ASHRAE Eq. (35)
-            return (((1093 - (0.556 * WbDegF)) * WsWb) - (0.240 * (DbDegF - WbDegF))) / 
+            return (((1093 - (0.556 * WbDegF)) * WsWb) - (0.240 * (DbDegF - WbDegF))) /
                 (1093 + (0.444 * DbDegF) - WbDegF);
         }
 
@@ -623,7 +623,7 @@ namespace PsychrometryLib
                 return RH;
             }
         }
-        
+
         /// <summary>
         /// Calculate Specific Volume [ft3/lb] using Dry Bulb Temperature (DbDegF) [Deg. F] 
         /// and Air Humidity Ratio (W) [lbH2O/lbAIR]
@@ -645,7 +645,7 @@ namespace PsychrometryLib
                 return v;
             }
         }
-        
+
         /// <summary>
         /// Calculate Enthalpy of Moist Air [Btu/lb]
         /// </summary>
@@ -798,7 +798,7 @@ namespace PsychrometryLib
                 {
                     return WbT;
                 }
-            } 
+            }
         }
 
         /// <summary>
@@ -861,7 +861,7 @@ namespace PsychrometryLib
                 return P;
             }
         }
-        
+
         /// <summary>
         /// Converts Degrees Fahrenheit to Rankines
         /// </summary>

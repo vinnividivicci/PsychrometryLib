@@ -19,19 +19,13 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  **************************/
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using PsychrometryLib;
-
 namespace PsychrometryLib
 {
     /// <summary>
     /// The class PsychrometricAirMixtureSI represents a mix of two PsychrometricPointSI objects.
     /// All calculations are performed in their respective native units [SI].
     /// </summary>
-    public class PsychrometricAirMixtureSI : PsychrometricPointSI 
+    public class PsychrometricAirMixtureSI : PsychrometricPointSI
     {
         #region Private Variables
 
@@ -105,7 +99,7 @@ namespace PsychrometryLib
         {
             return ((x1 * mass1) + (x2 * mass2)) / (mass1 + mass2);
         }
-        
+
         #endregion
     }
 }

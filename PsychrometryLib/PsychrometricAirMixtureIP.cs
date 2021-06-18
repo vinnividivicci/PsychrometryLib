@@ -19,12 +19,6 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  **************************/
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using PsychrometryLib;
-
 namespace PsychrometryLib
 {
     /// <summary>
@@ -47,7 +41,7 @@ namespace PsychrometryLib
         /// </summary>
         /// <param name="p1">First PsychrometricPoint [IP Units] for mixture.</param>
         /// <param name="p2">Second PsychrometricPoint [IP Units] for mixture.</param>
-        public PsychrometricAirMixtureIP(PsychrometricPointIP p1, PsychrometricPointIP p2) 
+        public PsychrometricAirMixtureIP(PsychrometricPointIP p1, PsychrometricPointIP p2)
         {
             CalcMixture(p1, p2);
         }
@@ -60,10 +54,10 @@ namespace PsychrometryLib
         /// </summary>
         /// <param name="p1">First PsychrometricPoint [IP Units] for mixture.</param>
         /// <param name="p2">Second PsychrometricPoint [IP Units] for mixture.</param>
-        private void CalcMixture(PsychrometricPointIP p1, PsychrometricPointIP p2) 
+        private void CalcMixture(PsychrometricPointIP p1, PsychrometricPointIP p2)
         {
             //  Check for invalid values
-            if (p1.VolumetricFlowRateInCFM <= 0 || p2.VolumetricFlowRateInCFM <= 0) 
+            if (p1.VolumetricFlowRateInCFM <= 0 || p2.VolumetricFlowRateInCFM <= 0)
             {
                 throw new VolumeCannotBeZero();
             }
@@ -80,7 +74,7 @@ namespace PsychrometryLib
             this._alt = p1.AltitudeInFeet;
 
             //  Calculate Dry-Bulb Temperature of the mix
-            double Db = GenericMassRatio(p1.DryBulbTemperatureInDegF, p1.MassicFlowInPoundsPerMinute, 
+            double Db = GenericMassRatio(p1.DryBulbTemperatureInDegF, p1.MassicFlowInPoundsPerMinute,
                 p2.DryBulbTemperatureInDegF, p2.MassicFlowInPoundsPerMinute);
 
             //  Calculate Wet-Bulb Temperature of the mix
@@ -103,7 +97,7 @@ namespace PsychrometryLib
         {
             return ((x1 * mass1) + (x2 * mass2)) / (mass1 + mass2);
         }
-        
+
         #endregion
     }
 }
