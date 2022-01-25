@@ -67,18 +67,18 @@ namespace PsychrometryLib
             }
 
             //  Add Flow Rates to get total flow rate
-            double totalFlowRate = p1.VolumetricFlowRateInCFM + p2.VolumetricFlowRateInCFM;
+            decimal totalFlowRate = p1.VolumetricFlowRateInCFM + p2.VolumetricFlowRateInCFM;
             this._flowRate = totalFlowRate;
 
             //  Assign altitude from point 1.
             this._alt = p1.AltitudeInFeet;
 
             //  Calculate Dry-Bulb Temperature of the mix
-            double Db = GenericMassRatio(p1.DryBulbTemperatureInDegF, p1.MassicFlowInPoundsPerMinute,
+            decimal Db = GenericMassRatio(p1.DryBulbTemperatureInDegF, p1.MassicFlowInPoundsPerMinute,
                 p2.DryBulbTemperatureInDegF, p2.MassicFlowInPoundsPerMinute);
 
             //  Calculate Wet-Bulb Temperature of the mix
-            double Wb = GenericMassRatio(p1.WetBulbTemperatureInDegF, p1.MassicFlowInPoundsPerMinute,
+            decimal Wb = GenericMassRatio(p1.WetBulbTemperatureInDegF, p1.MassicFlowInPoundsPerMinute,
                 p2.WetBulbTemperatureInDegF, p2.MassicFlowInPoundsPerMinute);
 
             //  Calculate the mix's properties
@@ -93,7 +93,7 @@ namespace PsychrometryLib
         /// <param name="x2">Any psychrometric value. Must be of same type as x1.</param>
         /// <param name="mass2">Mass 2</param>
         /// <returns></returns>
-        protected double GenericMassRatio(double x1, double mass1, double x2, double mass2)
+        protected decimal GenericMassRatio(decimal x1, decimal mass1, decimal x2, decimal mass2)
         {
             return ((x1 * mass1) + (x2 * mass2)) / (mass1 + mass2);
         }

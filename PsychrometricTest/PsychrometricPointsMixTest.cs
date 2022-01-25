@@ -20,15 +20,15 @@ namespace PsychrometricTest
         private void button1_Click(object sender, EventArgs e)
         {
             //  Collect Input Data
-            double point1_Db = double.Parse(point1_txtDb.Text);
-            double point1_Wb = double.Parse(point1_txtWb.Text);
-            double point1_Flow = double.Parse(point1_txtFlowRate.Text);
+            decimal point1_Db = decimal.Parse(point1_txtDb.Text);
+            decimal point1_Wb = decimal.Parse(point1_txtWb.Text);
+            decimal point1_Flow = decimal.Parse(point1_txtFlowRate.Text);
 
-            double altitude = double.Parse(point1_txtAltitude.Text);
+            decimal altitude = decimal.Parse(point1_txtAltitude.Text);
 
-            double point2_Db = double.Parse(point2_txtDb.Text);
-            double point2_Wb = double.Parse(point2_txtWb.Text);
-            double point2_Flow = double.Parse(point2_txtFlowRate.Text);
+            decimal point2_Db = decimal.Parse(point2_txtDb.Text);
+            decimal point2_Wb = decimal.Parse(point2_txtWb.Text);
+            decimal point2_Flow = decimal.Parse(point2_txtFlowRate.Text);
 
             //  Decide if IP or SI
             if (checkBox1.Checked == false)

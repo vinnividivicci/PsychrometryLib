@@ -35,94 +35,94 @@ namespace PsychrometryLib
         /// <summary>
         /// Protected class member, Altitude [m]
         /// </summary>
-        protected double _alt = 0;
+        protected decimal _alt = 0;
 
         /// <summary>
         /// Protected class member, Water Vapor Saturation Pressure [Pa] at dry-bulb temperature [Deg. C]
         /// </summary>
-        protected double _PwsDb;
+        protected decimal _PwsDb;
 
         /// <summary>
         /// Protected class member, Water Vapor Saturation Pressure [Pa] at wet-bulb temperature [Deg. C]
         /// </summary>
-        protected double _PwsWb;
+        protected decimal _PwsWb;
 
         /// <summary>
         /// Protected class member, Saturation Humidity Ratio [kgH2O/kgAIR] at dry-bulb temperature [Deg. C]
         /// </summary>
-        protected double _WsDb;
+        protected decimal _WsDb;
 
         /// <summary>
         /// Protected class member, Saturation Humidity Ratio [kgH2O/kgAIR] at wet-bulb temperature [Deg. C]
         /// </summary>
-        protected double _WsWb;
+        protected decimal _WsWb;
 
         /// <summary>
         /// Protected class member, Humidity Ratio [kgH2O/kgAIR]
         /// </summary>
-        protected double _W;
+        protected decimal _W;
 
         /// <summary>
         /// Protected class member, Degree of Saturation [unitless decimal]
         /// </summary>
-        protected double _u;
+        protected decimal _u;
 
         /// <summary>
         /// Protected class member, Relative Humidity [unitless decimal]
         /// </summary>
-        protected double _RH;
+        protected decimal _RH;
 
         /// <summary>
         /// Protected class member, Specific Volume [m3/kg]
         /// </summary>
-        protected double _v;
+        protected decimal _v;
 
         /// <summary>
         /// Protected class member, Specific Enthalpy [kJ/kgDryAir]
         /// </summary>
-        protected double _h;
+        protected decimal _h;
 
         /// <summary>
         /// Protected class member, Water Vapor Partial Pressure [kPa]
         /// </summary>
-        protected double _Pw;
+        protected decimal _Pw;
 
         /// <summary>
         /// Protected class member, Dewpoint Temperature [Deg. C]
         /// </summary>
-        protected double _Td;
+        protected decimal _Td;
 
         /// <summary>
         /// Protected class member, Atmospheric Pressure [kPa]
         /// </summary>
-        protected double _P;
+        protected decimal _P;
 
         /// <summary>
         /// Protected class member, Dry-bulb Temperature [Deg. C]
         /// </summary>
-        protected double _DbT;
+        protected decimal _DbT;
 
         /// <summary>
         /// Protected class member, Wet-bulb Temperature [Deg. C]
         /// </summary>
-        protected double _WbT;
+        protected decimal _WbT;
 
         /// <summary>
         /// Protected class member, Flow Rate [L/s]
         /// </summary>
-        protected double _flowRate = 0;
+        protected decimal _flowRate = 0;
 
         /// <summary>
         /// Protected class member, Mass [kg]
         /// </summary>
-        protected double _m;
+        protected decimal _m;
 
         #region Getters and Setters
 
         ///<summary>
         ///Altitude [m]
         /// </summary>
-        public double AltitudeInMeters
+        public decimal AltitudeInMeters
         {
             //  Altitude only needs to be set upon instantiation
             get
@@ -134,7 +134,7 @@ namespace PsychrometryLib
         /// <summary>
         /// Humidity Ratio (W) [kgH2O/kgAIR]
         /// </summary>
-        public double HumidityRatio
+        public decimal HumidityRatio
         {
             get
             {
@@ -145,7 +145,7 @@ namespace PsychrometryLib
         /// <summary>
         /// Humidity Ratio (W) [gH2O/kgAIR]
         /// </summary>
-        public double HumidityRatioGramsPerKilogram
+        public decimal HumidityRatioGramsPerKilogram
         {
             get
             {
@@ -156,7 +156,7 @@ namespace PsychrometryLib
         /// <summary>
         /// Relative Humidity in percentage form
         /// </summary>
-        public double RelativeHumidityPercentage
+        public decimal RelativeHumidityPercentage
         {
             get
             {
@@ -167,7 +167,7 @@ namespace PsychrometryLib
         /// <summary>
         /// Relative Humidity in decimal form
         /// </summary>
-        public double RelativeHumidityDecimal
+        public decimal RelativeHumidityDecimal
         {
             get
             {
@@ -178,7 +178,7 @@ namespace PsychrometryLib
         /// <summary>
         /// Specific Volume [m3/kg]
         /// </summary>
-        public double SpecificVolume
+        public decimal SpecificVolume
         {
             get
             {
@@ -189,7 +189,7 @@ namespace PsychrometryLib
         /// <summary>
         /// Returns Enthalpy [kJ/kg]
         /// </summary>
-        public double Enthalpy
+        public decimal Enthalpy
         {
             get
             {
@@ -200,7 +200,7 @@ namespace PsychrometryLib
         /// <summary>
         /// Dew Point Temperature [Deg. C]
         /// </summary>
-        public double DewPointTemperature
+        public decimal DewPointTemperature
         {
             get
             {
@@ -211,7 +211,7 @@ namespace PsychrometryLib
         /// <summary>
         /// Atmospheric Pressure [Pa]
         /// </summary>
-        public double AtmosphericPressurePa
+        public decimal AtmosphericPressurePa
         {
             get
             {
@@ -222,7 +222,7 @@ namespace PsychrometryLib
         /// <summary>
         /// Atmospheric Pressure [kPa]
         /// </summary>
-        public double AtmosphericPressureKPa
+        public decimal AtmosphericPressureKPa
         {
             get
             {
@@ -233,7 +233,7 @@ namespace PsychrometryLib
         /// <summary>
         /// Dry Bulb Temperature [Deg. C]
         /// </summary>
-        public double DryBulbTemperature
+        public decimal DryBulbTemperature
         {
             get
             {
@@ -244,7 +244,7 @@ namespace PsychrometryLib
         /// <summary>
         /// Wet Bulb Temperature [Deg. C]
         /// </summary>
-        public double WetBulbTemperature
+        public decimal WetBulbTemperature
         {
             get
             {
@@ -255,7 +255,7 @@ namespace PsychrometryLib
         /// <summary>
         /// Massic Flow [kg/s]
         /// </summary>
-        public double MassicFlowKilogramsPerSecond
+        public decimal MassicFlowKilogramsPerSecond
         {
             get
             {
@@ -266,7 +266,7 @@ namespace PsychrometryLib
         /// <summary>
         /// Air Flow Rate [L/s]
         /// </summary>
-        public double VolumetricFlowRateLitersPerSecond
+        public decimal VolumetricFlowRateLitersPerSecond
         {
             get
             {
@@ -286,7 +286,7 @@ namespace PsychrometryLib
         /// Secondary constructor. Uses the input supplied by the programmer to initialize it's altitude.
         /// </summary>
         /// <param name="Altitude">Programmer-supplied altitude value in meters.</param>
-        public PsychrometricPointSI(double Altitude)
+        public PsychrometricPointSI(decimal Altitude)
         {
             //user has initialized altitude.
             this._alt = Altitude;
@@ -298,7 +298,7 @@ namespace PsychrometryLib
         /// </summary>
         /// <param name="Altitude">Altitude [m]</param>
         /// <param name="FlowRateLitersPerSecond">Flow Rate [L/s]</param>
-        public PsychrometricPointSI(double Altitude, double FlowRateLitersPerSecond)
+        public PsychrometricPointSI(decimal Altitude, decimal FlowRateLitersPerSecond)
         {
             this._alt = Altitude;
             this._flowRate = FlowRateLitersPerSecond;
@@ -316,7 +316,7 @@ namespace PsychrometryLib
         /// </summary>
         /// <param name="DbDegC">Dry-Bulb Temperature [Deg. C]</param>
         /// <param name="WbDegC">Wet-Bulb Temperature [Deg. C]</param>
-        public void CalcAllUsingDbWb(double DbDegC, double WbDegC)
+        public void CalcAllUsingDbWb(decimal DbDegC, decimal WbDegC)
         {
             if (WbDegC > DbDegC)
             {
@@ -369,7 +369,7 @@ namespace PsychrometryLib
         /// </summary>
         /// <param name="DbDegC">Dry-Bulb Temperature [Deg. C]</param>
         /// <param name="RhDecimal">Relative Humidity [Unitless Decimal]</param>
-        public void CalcAllUsingDbRH(double DbDegC, double RhDecimal)
+        public void CalcAllUsingDbRH(decimal DbDegC, decimal RhDecimal)
         {
             if (RhDecimal > 1 || RhDecimal < 0)
             {
@@ -411,7 +411,7 @@ namespace PsychrometryLib
         /// </summary>
         /// <param name="DbDegC">Dry-Bulb Temperature [Deg. C]</param>
         /// <param name="TdDegC">Dew-Point Temperature [Deg. C]</param>
-        public void CalcAllUsingDbTd(double DbDegC, double TdDegC)
+        public void CalcAllUsingDbTd(decimal DbDegC, decimal TdDegC)
         {
             if (TdDegC > DbDegC)
             {
@@ -464,14 +464,14 @@ namespace PsychrometryLib
         /// </summary>
         /// <param name="DbDegC">Dry-Bulb Temperature [Deg. C]</param>
         /// <param name="grams">Absolute water content of air [grams(a)/kg(da)]</param>
-        public void CalcAllUsingDbGrams(double DbDegC, double grams)
+        public void CalcAllUsingDbGrams(decimal DbDegC, decimal grams)
         {
-            double RH = 0;
-            double W = grams / 1000;
-            double P = CalcAtmPressurePa(this._alt);
-            double PwsDb = CalcPws(DbDegC);
-            double Ws = CalcWs(PwsDb, P);
-            double u = CalcU(W, Ws);
+            decimal RH = 0;
+            decimal W = grams / 1000;
+            decimal P = CalcAtmPressurePa(this._alt);
+            decimal PwsDb = CalcPws(DbDegC);
+            decimal Ws = CalcWs(PwsDb, P);
+            decimal u = CalcU(W, Ws);
             RH = CalcRH(u, PwsDb, P);
 
             CalcAllUsingDbRH(DbDegC, RH);
@@ -486,51 +486,51 @@ namespace PsychrometryLib
         /// </summary>
         /// <param name="TDegC">Temperature [Deg. C]</param>
         /// <returns>Pressure of Saturated Pure Water(Pws) [Pa]</returns>
-        protected static double CalcPws(double TDegC)
+        protected static decimal CalcPws(decimal TDegC)
         {
             //See ASHRAE Fundamentals 2005 Chapter 6
 
             //declare ASHRAE 2005 constants 
-            double C1 = -5.6745359e3;
-            double C2 = 6.3925247e0;
-            double C3 = -9.677843e-3;
-            double C4 = 6.2215701e-7;
-            double C5 = 2.0747825e-9;
-            double C6 = -9.484024e-13;
-            double C7 = 4.1635019e0;
+            decimal C1 = Convert.ToDecimal(-5.6745359e3);
+            decimal C2 = Convert.ToDecimal(6.3925247e0);
+            decimal C3 = Convert.ToDecimal(-9.677843e-3);
+            decimal C4 = Convert.ToDecimal(6.2215701e-7);
+            decimal C5 = Convert.ToDecimal(2.0747825e-9);
+            decimal C6 = Convert.ToDecimal(-9.484024e-13);
+            decimal C7 = Convert.ToDecimal(4.1635019e0);
 
-            double C8 = -5.8002206e+3;
-            double C9 = 1.3914993e0;
-            double C10 = -4.8640239e-2;
-            double C11 = 4.1764768e-5;
-            double C12 = -1.4452093e-8;
-            double C13 = 6.5459673e0;
+            decimal C8 = Convert.ToDecimal(-5.8002206e+3);
+            decimal C9 = Convert.ToDecimal(1.3914993e0);
+            decimal C10 = Convert.ToDecimal(-4.8640239e-2);
+            decimal C11 = Convert.ToDecimal(4.1764768e-5);
+            decimal C12 = Convert.ToDecimal(-1.4452093e-8);
+            decimal C13 = Convert.ToDecimal(6.5459673e0);
 
             //local variables
-            double Pws = 0;
-            double lnPws = 0;
+            decimal Pws = 0;
+            decimal lnPws = 0;
 
             //Convert into absolute temperature
-            double TDegK = DegCToK(TDegC);
+            decimal TDegK = DegCToK(TDegC);
 
-            if (TDegK >= 173.15 && TDegK <= 273.15)
+            if (TDegK >= (decimal)173.15 && TDegK <= (decimal)273.15)
             {
                 //ASHRAE Eq.(5)
 
-                lnPws = (C1 / TDegK) + C2 + (C3 * TDegK) + (C4 * Math.Pow(TDegK, 2)) +
-                    (C5 * Math.Pow(TDegK, 3)) + (C6 * Math.Pow(TDegK, 4)) + (C7 * Math.Log(TDegK));
+                lnPws = (C1 / TDegK) + C2 + (C3 * TDegK) + (C4 * (decimal)Math.Pow((double)TDegK, 2)) +
+                    (C5 * (decimal)Math.Pow((double)TDegK, 3)) + (C6 * (decimal)Math.Pow((double)TDegK, 4)) + (C7 * (decimal)Math.Log((double)TDegK));
 
-                Pws = Math.Exp(lnPws);
+                Pws = (decimal)Math.Exp((double)lnPws);
 
                 return Pws;
             }
-            else if (TDegK > 273.15 && TDegK <= 473.15)
+            else if (TDegK > (decimal)273.15 && TDegK <= (decimal)473.15)
             {
                 //ASHRAE Eq. (6)
-                lnPws = (C8 / TDegK) + C9 + (C10 * TDegK) + (C11 * Math.Pow(TDegK, 2)) +
-                    (C12 * Math.Pow(TDegK, 3)) + (C13 * Math.Log(TDegK));
+                lnPws = (C8 / TDegK) + C9 + (C10 * TDegK) + (C11 * (decimal)Math.Pow((double)TDegK, 2)) +
+                    (C12 * (decimal)Math.Pow((double)TDegK, 3)) + (C13 * (decimal)Math.Log((double)TDegK));
 
-                Pws = Math.Exp(lnPws);
+                Pws = (decimal)Math.Exp((double)lnPws);
 
                 return Pws;
             }
@@ -547,11 +547,11 @@ namespace PsychrometryLib
         /// <param name="PwsInPa">Pressure of Saturated Pure Water(Pws) [Pa]</param>
         /// <param name="PInPa">Pressure [Pa]</param>
         /// <returns>Humidity Ratio of Moist air at saturation (Ws) [kgH2O/kgAIR]</returns>
-        protected static double CalcWs(double PwsInPa, double PInPa)
+        protected static decimal CalcWs(decimal PwsInPa, decimal PInPa)
         {
             //ASHRAE Eq. (23)
-            double Ws;
-            Ws = (0.621945 * ((PwsInPa) / (PInPa - PwsInPa)));
+            decimal Ws;
+            Ws = ((decimal)0.621945 * ((PwsInPa) / (PInPa - PwsInPa)));
 
             if (Ws <= 0)
             {
@@ -571,14 +571,14 @@ namespace PsychrometryLib
         /// <param name="WsWb">Humidity Ratio of Moist air at saturation for 
         /// Wet Bulb Temperature [kgH2O/kgAIR]</param>
         /// <returns>Air Humidity Ratio (W) [kgH2O/kgAIR]</returns>
-        protected static double CalcW(double DbDegC, double WbDegC, double WsWb)
+        protected static decimal CalcW(decimal DbDegC, decimal WbDegC, decimal WsWb)
         {
             //  This method CANNOT return an exception because it would render FindWbT useless.
             //  ASHRAE Eq. (35)
-            double W;
+            decimal W;
 
-            W = (((2501 - (2.326 * WbDegC)) * WsWb) - (1.006 * (DbDegC - WbDegC))) /
-               (2501 + (1.86 * DbDegC) - (4.186 * WbDegC));
+            W = (((2501 - ((decimal)2.326 * WbDegC)) * WsWb) - ((decimal)1.006 * (DbDegC - WbDegC))) /
+               (2501 + ((decimal)1.86 * DbDegC) - ((decimal)4.186 * WbDegC));
 
             return W;
         }
@@ -590,10 +590,10 @@ namespace PsychrometryLib
         /// <param name="WsDb">Humidity Ratio of Moist air at saturation for 
         /// Wet Bulb Temperature [kgH2O/kgAIR]</param>
         /// <returns>Degree of Saturation (u) [unitless decimal]</returns>
-        protected static double CalcU(double W, double WsDb)
+        protected static decimal CalcU(decimal W, decimal WsDb)
         {
             //ASHRAE Eq. (12)
-            double u;
+            decimal u;
             u = W / WsDb;
             if (u <= 0)
             {
@@ -618,10 +618,10 @@ namespace PsychrometryLib
         /// <param name="PwsDbInPa">Pressure of Saturated Pure Water(Pws) [Pa] at Dry Bulb Temperature</param>
         /// <param name="PInPa">Atmospheric Pressure (p) [Pa]</param>
         /// <returns>Relative Humidity [decimal form]</returns>
-        protected static double CalcRH(double u, double PwsDbInPa, double PInPa)
+        protected static decimal CalcRH(decimal u, decimal PwsDbInPa, decimal PInPa)
         {
             //ASHRAE Eq. (25)
-            double RH;
+            decimal RH;
             RH = u / (1 - ((1 - u) * (PwsDbInPa / PInPa)));
 
             if (RH < 0 || RH > 1)
@@ -642,10 +642,10 @@ namespace PsychrometryLib
         /// <param name="W">Air Humidity Ratio (W) [kgH2O/kgAIR]</param>
         /// <param name="PInPa">Atmospheric Pressure [Pa]</param>
         /// <returns>Specific Volume (v) [m3/kg]</returns>
-        protected static double CalcV(double DbDegC, double W, double PInPa)
+        protected static decimal CalcV(decimal DbDegC, decimal W, decimal PInPa)
         {
-            double v;
-            v = (0.2871 * (DbDegC + 273.15) * (1 + (1.6078 * W))) / (PInPa / 1000);
+            decimal v;
+            v = ((decimal)0.2871 * (DbDegC + (decimal)273.15) * (1 + ((decimal)1.6078 * W))) / (PInPa / 1000);
             if (v <= 0)
             {
                 throw new ImpossibleSpecificVolume();
@@ -662,11 +662,11 @@ namespace PsychrometryLib
         /// <param name="DbDegC">Dry Bulb Temperature [Deg. C]</param>
         /// <param name="W">Air Humidity Ratio (W) [kgH2O/kgAIR]</param>
         /// <returns>Enthalpy of Moist Air (h) [kJ/kg]</returns>
-        protected static double CalcH(double DbDegC, double W)
+        protected static decimal CalcH(decimal DbDegC, decimal W)
         {
             //ASHRAE Eq. (32)
             // NOTE: This is relative enthalpy so it can be negative.
-            return ((1.006 * DbDegC) + (W * (2501 + (1.86 * DbDegC))));
+            return (((decimal)1.006 * DbDegC) + (W * (2501 + ((decimal)1.86 * DbDegC))));
         }
 
         /// <summary>
@@ -676,11 +676,11 @@ namespace PsychrometryLib
         /// <param name="PInPa">Atmospheric Pressure (p) [Pa]</param>
         /// <param name="W">Air Humidity Ratio (W) [kgH2O/kgAIR]</param>
         /// <returns>Partial Pressure of Water Vapor in moist air (Pw) [Pa]</returns>
-        protected static double CalcPw(double PInPa, double W)
+        protected static decimal CalcPw(decimal PInPa, decimal W)
         {
             //ASHRAE Eq. (36)
-            double Pw;
-            Pw = (PInPa * W) / (0.62198 + W);
+            decimal Pw;
+            Pw = (PInPa * W) / ((decimal)0.62198 + W);
 
             if (Pw < 0)
             {
@@ -699,31 +699,31 @@ namespace PsychrometryLib
         /// <param name="PwInPa">Partial Pressure of Water Vapor in moist air (Pw) [Pa]</param>
         /// <param name="WbDegC">Wet Bulb Temperature [Deg. C]</param>
         /// <returns>Dew Point Temperature [Deg. C]</returns>
-        protected static double CalcTd(double PwInPa, double WbDegC)
+        protected static decimal CalcTd(decimal PwInPa, decimal WbDegC)
         {
             /* Although not exact, the following control statement aims to select
              * the appropriate formula to calculate the dew point
              * */
-            double PwInKpa = PwInPa / 1000;
-            double a = Math.Log(PwInKpa);
+            decimal PwInKpa = PwInPa / 1000;
+            decimal a = (decimal)Math.Log((double)PwInKpa);
 
 
             if (WbDegC >= 0 && WbDegC <= 93)
             {
                 //ASHRAE Eq. (37)
                 //ASHRAE Constants
-                double C14 = 6.54;
-                double C15 = 14.526;
-                double C16 = 0.7389;
-                double C17 = 0.09486;
-                double C18 = 0.4569;
+                decimal C14 = (decimal)6.54;
+                decimal C15 = (decimal)14.526;
+                decimal C16 = (decimal)0.7389;
+                decimal C17 = (decimal)0.09486;
+                decimal C18 = (decimal)0.4569;
 
-                return C14 + (C15 * a) + (C16 * Math.Pow(a, 2))
-                    + (C17 * Math.Pow(a, 3)) + (C18 * Math.Pow(PwInKpa, 0.1984));
+                return C14 + (C15 * a) + (C16 * (decimal)Math.Pow((double)a, 2))
+                    + (C17 * (decimal)Math.Pow((double)a, 3)) + (C18 * (decimal)Math.Pow((double)PwInKpa, 0.1984));
             }
             else if (WbDegC < 0)
             {
-                return 6.09 + (12.608 * a) + (0.4959 * Math.Pow(a, 2));
+                return (decimal)6.09 + ((decimal)12.608 * a) + ((decimal)0.4959 * (decimal)Math.Pow((double)a, 2));
             }
             else
             {
@@ -739,7 +739,7 @@ namespace PsychrometryLib
         /// <param name="W">Air Humidity Ratio (W) [kgH2O/kgAIR]</param>
         /// <param name="PInPa">Atmospheric Pressure (p) [Pa]</param>
         /// <returns>Wet Bulb Temperature [Deg. C]</returns>
-        protected static double FindWbT(double DbDegC, double TdDegC, double W, double PInPa)
+        protected static decimal FindWbT(decimal DbDegC, decimal TdDegC, decimal W, decimal PInPa)
         {
             if (TdDegC > DbDegC)
             {
@@ -747,20 +747,20 @@ namespace PsychrometryLib
             }
             else
             {
-                double TdPrime = 0;
-                double PwsWbPrime;
-                double WsWbPrime;
-                double WPrime = 0;
-                double PwPrime;
+                decimal TdPrime = 0;
+                decimal PwsWbPrime;
+                decimal WsWbPrime;
+                decimal WPrime = 0;
+                decimal PwPrime;
 
-                double ProposedTemp;
+                decimal ProposedTemp;
                 ProposedTemp = TdDegC;
 
-                double incrementFactor = 1;
+                decimal incrementFactor = 1;
 
                 while ((W - WPrime) > 0)
                 {
-                    incrementFactor = Math.Max(Math.Abs((DbDegC - TdPrime) / 1000), 0.0001);
+                    incrementFactor = (decimal)Math.Max(Math.Abs(((double)DbDegC - (double)TdPrime) / 1000), 0.0001);
 
                     PwsWbPrime = CalcPws(ProposedTemp);
                     WsWbPrime = CalcWs(PwsWbPrime, PInPa);
@@ -770,7 +770,7 @@ namespace PsychrometryLib
                     //If W < 0 increment along curve until above 0;
                     while (WPrime < 0)
                     {
-                        incrementFactor = Math.Max(Math.Abs((DbDegC - TdPrime) / 100), 0.001);
+                        incrementFactor = (decimal)Math.Max(Math.Abs(((double)DbDegC - (double)TdPrime) / 100), 0.001);
 
                         PwsWbPrime = CalcPws(ProposedTemp);
                         WsWbPrime = CalcWs(PwsWbPrime, PInPa);
@@ -799,7 +799,7 @@ namespace PsychrometryLib
                     }
                 }
 
-                double WbT = ProposedTemp - incrementFactor;
+                decimal WbT = ProposedTemp - incrementFactor;
 
                 if (WbT > DbDegC)
                 {
@@ -822,7 +822,7 @@ namespace PsychrometryLib
         /// <param name="SpecificVolume">Specific Volume [m3/kg]</param>
         /// <param name="VolumetricFlowRate">Volumetric Flow Rate [L/s]</param>
         /// <returns>Massic Flow Rate [kg/s]</returns>
-        protected static double CalcM(double SpecificVolume, double VolumetricFlowRate)
+        protected static decimal CalcM(decimal SpecificVolume, decimal VolumetricFlowRate)
         {
             if (SpecificVolume <= 0)
             {
@@ -831,7 +831,7 @@ namespace PsychrometryLib
             else
             {
                 //  0.028317 is a conversion factor for converting Liters to m3.
-                return (VolumetricFlowRate * 0.028317) / SpecificVolume;
+                return (VolumetricFlowRate * (decimal)0.028317) / SpecificVolume;
             }
         }
 
@@ -840,9 +840,9 @@ namespace PsychrometryLib
         /// </summary>
         /// <param name="AltitudeInM">Altitude [m]</param>
         /// <returns>Atmospheric Pressure (p) [Pa]</returns>
-        protected static double CalcAtmPressurePa(double AltitudeInM)
+        protected static decimal CalcAtmPressurePa(decimal AltitudeInM)
         {
-            return 101325 * Math.Pow(1 - 2.25577e-05 * AltitudeInM, 5.2559);
+            return 101325 * (decimal)Math.Pow(1 - 2.25577e-05 * (double)AltitudeInM, 5.2559);
         }
 
         /// <summary>
@@ -850,9 +850,9 @@ namespace PsychrometryLib
         /// </summary>
         /// <param name="DegC">Degrees Celsius</param>
         /// <returns>Rankines</returns>
-        protected static double DegCToK(double DegC)
+        protected static decimal DegCToK(decimal DegC)
         {
-            return DegC + 273.15;
+            return DegC + (decimal)273.15;
         }
 
         #endregion

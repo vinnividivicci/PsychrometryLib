@@ -25,9 +25,9 @@ namespace PsychrometricTest
         private void tabPanel1_btnCalc_Click(object sender, EventArgs e)
         {
             //  Collect input data
-            double altitude = double.Parse(tabPanel1_txtAltitude.Text);
-            double Db = double.Parse(tabPanel1_txtDb.Text);
-            double Wb = double.Parse(tabPanel1_txtWb.Text);
+            decimal altitude = decimal.Parse(tabPanel1_txtAltitude.Text);
+            decimal Db = decimal.Parse(tabPanel1_txtDb.Text);
+            decimal Wb = decimal.Parse(tabPanel1_txtWb.Text);
 
             //  Decide if IP or SI
             if (checkBox1.Checked == false)
@@ -63,9 +63,9 @@ namespace PsychrometricTest
         private void tabPanel2_btnCalc_Click(object sender, EventArgs e)
         {
             //  Collect input data
-            double altitude = double.Parse(tabPanel2_txtAltitude.Text);
-            double Db = double.Parse(tabPanel2_txtDb.Text);
-            double RH = double.Parse(tabPanel2_txtRH.Text);
+            decimal altitude = decimal.Parse(tabPanel2_txtAltitude.Text);
+            decimal Db = decimal.Parse(tabPanel2_txtDb.Text);
+            decimal RH = decimal.Parse(tabPanel2_txtRH.Text);
 
             //  Decide if IP or SI
             if (checkBox1.Checked == false)
@@ -101,9 +101,9 @@ namespace PsychrometricTest
         private void tabPanel3_btnCalc_Click(object sender, EventArgs e)
         {
             //  Collect input data
-            double altitude = double.Parse(tabPanel3_txtAltitude.Text);
-            double Db = double.Parse(tabPanel3_txtDb.Text);
-            double Td = double.Parse(tabPanel3_txtTd.Text);
+            decimal altitude = decimal.Parse(tabPanel3_txtAltitude.Text);
+            decimal Db = decimal.Parse(tabPanel3_txtDb.Text);
+            decimal Td = decimal.Parse(tabPanel3_txtTd.Text);
 
             //  Decide if IP or SI
             if (checkBox1.Checked == false)
@@ -139,9 +139,9 @@ namespace PsychrometricTest
         private void tabPanel4_btnCalculate_Click(object sender, EventArgs e)
         {
             //  Collect input data
-            double altitude = double.Parse(tabPanel4_txtAltitude.Text);
-            double Db = double.Parse(tabPanel4_txtDb.Text);
-            double W = double.Parse(tabPanel4_txtHumidityRatio.Text);
+            decimal altitude = decimal.Parse(tabPanel4_txtAltitude.Text);
+            decimal Db = decimal.Parse(tabPanel4_txtDb.Text);
+            decimal W = decimal.Parse(tabPanel4_txtHumidityRatio.Text);
 
             //  Decide if IP or SI
             if (checkBox1.Checked == false)
