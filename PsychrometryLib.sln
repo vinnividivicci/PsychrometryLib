@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29230.47
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B7468365-6140-4F26-AB05-35535FAE75B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychrometryLib", "PsychrometryLib\PsychrometryLib.csproj", "{86080B04-A951-408B-A5EA-61F07A98ED28}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychrometricTest", "PsychrometricTest\PsychrometricTest.csproj", "{3E0855ED-A8B3-4255-BC9D-2E96DC1E96A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratePsychroDB", "GeneratePsychroDB\GeneratePsychroDB.csproj", "{C43230D9-6BBB-4606-B97B-FAAA82C411CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{3E0855ED-A8B3-4255-BC9D-2E96DC1E96A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E0855ED-A8B3-4255-BC9D-2E96DC1E96A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E0855ED-A8B3-4255-BC9D-2E96DC1E96A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C43230D9-6BBB-4606-B97B-FAAA82C411CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C43230D9-6BBB-4606-B97B-FAAA82C411CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C43230D9-6BBB-4606-B97B-FAAA82C411CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C43230D9-6BBB-4606-B97B-FAAA82C411CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
