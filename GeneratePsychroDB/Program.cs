@@ -3,24 +3,11 @@ using PsychrometryLib;
 using System.Text;
 
 var csv = new StringBuilder();
-var headerLine = $"seriesName, DB, RH, WB, HumidityRatioGrains";
+var headerLine = $"units, seriesName, DB, RH, WB, HumidityRatioGrains";
 csv.AppendLine(headerLine);
 
 // From 20 F to 120F
 var p1 = new PsychrometricPointIP();
-//for (int i = 20; i <= 120; i++)
-//{
-//    // From 1% RH to 100% RH
-//    decimal j = (decimal)0.01;
-//    while(j <= (decimal)1.0)
-//    {
-//        p1.CalcAllUsingDbRH(i, j);
-//        j += (decimal)0.01;
-//        // Console.WriteLine(String.Format("DB: {0}, RH: {1}, Wb: {2}",p1.DryBulbTemperatureInDegF, p1.RelativeHumidityDecimal, p1.WetBulbTemperatureInDegF));
-//        var newLine = $"{p1.DryBulbTemperatureInDegF}, {p1.RelativeHumidityDecimal}, {p1.WetBulbTemperatureInDegF}, {p1.HumidityRatioGrainsPerPound}";
-//        csv.AppendLine(newLine);
-//    } 
-//}
 
 // From 1% RH to 100% RH
 decimal j = (decimal)0.1;
@@ -31,8 +18,25 @@ while (j <= (decimal)1.0)
     {
         p1.CalcAllUsingDbRH(i, j);
         
-        // Console.WriteLine(String.Format("DB: {0}, RH: {1}, Wb: {2}",p1.DryBulbTemperatureInDegF, p1.RelativeHumidityDecimal, p1.WetBulbTemperatureInDegF));
-        var newLine = $"line_rh_{j}, {p1.DryBulbTemperatureInDegF}, {p1.RelativeHumidityDecimal}, {p1.WetBulbTemperatureInDegF}, {p1.HumidityRatioGrainsPerPound}";
+        var newLine = $"{nameof(PsychrometricAirMixtureIP)}, line_rh_{j}, {p1.DryBulbTemperatureInDegF}, {p1.RelativeHumidityDecimal}, {p1.WetBulbTemperatureInDegF}, {p1.HumidityRatioGrainsPerPound}";
+        csv.AppendLine(newLine);
+    }
+    j += (decimal)0.1;
+}
+
+// From -10 C to 50 C
+var p2 = new PsychrometricPointSI();
+
+// From 1% RH to 100% RH
+decimal k = (decimal)0.1;
+while (k <= (decimal)1.0)
+{
+    // From -10 C to 50 C
+    for (int i = -10; i <= 50; i++)
+    {
+        p2.CalcAllUsingDbRH(i, k);
+
+        var newLine = $"{nameof(PsychrometricAirMixtureSI)}, line_rh_{k}, {p2.DryBulbTemperature}, {p2.RelativeHumidityDecimal}, {p2.WetBulbTemperature}, {p2.HumidityRatioGramsPerKilogram}";
         csv.AppendLine(newLine);
     }
     j += (decimal)0.1;
