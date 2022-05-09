@@ -2,9 +2,9 @@
 using PsychrometryLib;
 using System.Text;
 
-var csv = new StringBuilder();
-var headerLine = $"units, seriesName, DB, RH, WB, HumidityRatioGrains";
-csv.AppendLine(headerLine);
+var csvIP = new StringBuilder();
+var headerLineIP = $"units, seriesName, DB, RH, WB, HumidityRatioGrains";
+csvIP.AppendLine(headerLineIP);
 
 // From 20 F to 120F
 var p1 = new PsychrometricPointIP();
@@ -18,11 +18,17 @@ while (j <= (decimal)1.0)
     {
         p1.CalcAllUsingDbRH(i, j);
         
-        var newLine = $"{nameof(PsychrometricAirMixtureIP)}, line_rh_{j}, {p1.DryBulbTemperatureInDegF}, {p1.RelativeHumidityDecimal}, {p1.WetBulbTemperatureInDegF}, {p1.HumidityRatioGrainsPerPound}";
-        csv.AppendLine(newLine);
+        var newLine = $"line_rh_{j}, {p1.DryBulbTemperatureInDegF}, {p1.RelativeHumidityDecimal}, {p1.WetBulbTemperatureInDegF}, {p1.HumidityRatioGrainsPerPound}";
+        csvIP.AppendLine(newLine);
     }
     j += (decimal)0.1;
 }
+
+// SI
+
+var csvSI = new StringBuilder();
+var headerLineSI = $"seriesName, DB, RH, WB, HumidityRatioGraamsPerKilogram";
+csvIP.AppendLine(headerLineSI);
 
 // From -10 C to 50 C
 var p2 = new PsychrometricPointSI();
@@ -36,14 +42,18 @@ while (k <= (decimal)1.0)
     {
         p2.CalcAllUsingDbRH(i, k);
 
-        var newLine = $"{nameof(PsychrometricAirMixtureSI)}, line_rh_{k}, {p2.DryBulbTemperature}, {p2.RelativeHumidityDecimal}, {p2.WetBulbTemperature}, {p2.HumidityRatioGramsPerKilogram}";
-        csv.AppendLine(newLine);
+        var newLine = $"line_rh_{k}, {p2.DryBulbTemperature}, {p2.RelativeHumidityDecimal}, {p2.WetBulbTemperature}, {p2.HumidityRatioGramsPerKilogram}";
+        csvSI.AppendLine(newLine);
     }
     j += (decimal)0.1;
 }
 
-var filePath = "C:\\Users\\vince\\Desktop\\psychroDB.csv";
-File.WriteAllText(filePath, csv.ToString());
+// var filePath = "C:\\Users\\vince\\Desktop\\psychroDB.csv";
+var filePath = "C:\\Users\\vince\\Desktop\\psychroDB_IP.csv";
+File.WriteAllText(filePath, csvIP.ToString());
+
+filePath = "C:\\Users\\vince\\Desktop\\psychroDB_SI.csv";
+File.WriteAllText(filePath, csvSI.ToString());
 
 
 
