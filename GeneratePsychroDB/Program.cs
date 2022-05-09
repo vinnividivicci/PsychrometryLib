@@ -27,7 +27,7 @@ while (j <= (decimal)1.0)
 // SI
 
 var csvSI = new StringBuilder();
-var headerLineSI = $"seriesName, DB, RH, WB, HumidityRatioGraamsPerKilogram";
+var headerLineSI = $"seriesName, DB, RH, WB, HumidityRatioGramsPerKilogram";
 csvIP.AppendLine(headerLineSI);
 
 // From -10 C to 50 C
