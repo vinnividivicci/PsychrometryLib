@@ -3,7 +3,7 @@ using PsychrometryLib;
 using System.Text;
 
 var csvIP = new StringBuilder();
-var headerLineIP = $"units, seriesName, DB, RH, WB, HumidityRatioGrains";
+var headerLineIP = "seriesName, DB, RH, WB, HumidityRatioGrains";
 csvIP.AppendLine(headerLineIP);
 
 Console.WriteLine("Generating IP basic series...");
@@ -27,8 +27,8 @@ while (j <= (decimal)1.0)
 
 // SI
 var csvSI = new StringBuilder();
-var headerLineSI = $"seriesName, DB, RH, WB, HumidityRatioGramsPerKilogram";
-csvIP.AppendLine(headerLineSI);
+var headerLineSI = "seriesName, DB, RH, WB, HumidityRatioGramsPerKilogram";
+csvSI.AppendLine(headerLineSI);
 
 Console.WriteLine("Generating SI basic series...");
 // From -10 C to 50 C
@@ -51,10 +51,10 @@ while (k <= (decimal)1.0)
 
 Console.WriteLine("Writing files to desktop...");
 
-var filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "psychroDB_IP.csv");
+var filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "chartBasicSeriesIP.csv");
 File.WriteAllText(filePath, csvIP.ToString());
 
-filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "psychroDB_SI.csv");
+filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "chartBasicSeriesSI.csv");
 File.WriteAllText(filePath, csvSI.ToString());
 
 
